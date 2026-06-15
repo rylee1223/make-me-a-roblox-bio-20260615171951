@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Bio Scraper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Roblox Bio Scraper</h1>
+        <p>Enter a Roblox username to retrieve the player's bio.</p>
+    </header>
+
+    <main class="site-main">
+        <section class="input-section">
+            <form id="bio-form" autocomplete="off">
+                <label for="username">Roblox Username</label>
+                <input type="text" id="username" name="username" placeholder="e.g. Builderman" required>
+                <button type="submit">Get Bio</button>
+            </form>
+        </section>
+
+        <section class="result-section" aria-live="polite">
+            <div id="loading" class="hidden">Loading…</div>
+            <div id="error" class="error hidden"></div>
+            <div id="bio-container" class="bio hidden">
+                <h2 id="display-username"></h2>
+                <p id="display-bio"></p>
+                <button id="copy-btn">Copy Bio</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Roblox Bio Scraper – Open source</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
